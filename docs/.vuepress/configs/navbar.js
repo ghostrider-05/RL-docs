@@ -1,33 +1,18 @@
 module.exports = [
     {
+        text: 'Essentials',
+        link: '/essential/index'
+    },
+
+    {
         text: 'Documentation',
         items: [
             {
-                text: 'Essential',
-                link: '/essential/index'
-            },
-            {
-                text: 'FAQ',
-                link: '/faq/index'
-            },
-            {
-                text: 'Cheatsheets',
-                link: '/cheatsheet/index'
-            },
-            {
-                text: 'Guides',
+                text: 'UDK',
                 items: [
                     {
-                        text: 'Information',
-                        link: '/guide/index'
-                    },
-                    {
-                        text: 'UDK Basics',
+                        text: 'Basics',
                         link: '/guide/udk/00_start'
-                    },
-                    {
-                        text: 'Blender Basics',
-                        link: '/guide/blender/01_blender'
                     },
                     {
                         text: 'UDK Advanced',
@@ -36,10 +21,6 @@ module.exports = [
                     {
                         text: 'Kismet',
                         link: '/guide/kismet/01_kismet'
-                    },
-                    {
-                        text: 'Blender Advanced',
-                        link: '/guide/blender/11_animation'
                     },
                     {
                         text: 'Textures',
@@ -58,6 +39,23 @@ module.exports = [
                         link: '/guide/misc/01_misc'
                     }
                 ]
+            },
+            {
+                text: 'Blender',
+                items: [
+                    {
+                        text: 'Blender Basics',
+                        link: '/guide/blender/01_blender'
+                    },
+                    {
+                        text: 'Exporting to UDK',
+                        link: '/guide/blender/05_fbx'
+                    },
+                    {
+                        text: 'Blender Advanced',
+                        link: '/guide/blender/11_animation'
+                    }
+                ]
             }
         ]
     },
@@ -70,34 +68,52 @@ module.exports = [
                 link: '/resources/downloads'
             },
             {
-                text: 'Kismet Library',
-                link: 'https://github.com/RocketLeagueMapmaking/Kismet'
-            },
-            {
-                text: 'Other Guides',
-                link: '/resources/guides'
-            },
-            {
                 text: 'References',
                 link: '/resources/references'
             },
             {
-                text: 'Modding Network',
-                link: '/resources/modding_network'
+                text: 'FAQ',
+                link: '/faq/index'
+            },
+            {
+                text: 'Community',
+                items: [
+                    {
+                        text: 'Other Guides',
+                        link: '/resources/guides'
+                    },
+                    {
+                        text: 'Modding Network',
+                        link: '/resources/modding_network'
+                    },
+                    {
+                        text: 'Steam workshop',
+                        link: 'https://steamcommunity.com/app/252950/workshop/'
+                    }
+                ]
+            },
+            {
+                text: 'Projects',
+                items: [
+                    {
+                        text: 'Kismet Library',
+                        link: 'https://github.com/RocketLeagueMapmaking/Kismet'
+                    }
+                ]
             }
         ]
     },
 
     {
-        text: 'More',
+        text: 'Learn more',
         items: [
-            {
-                text: 'Contact',
-                link: '/more/contact'
-            },
             {
                 text: 'About',
                 link: '/more/about'
+            },
+            {
+                text: 'Contact',
+                link: '/more/contact'
             },
             {
                 text: 'Roadmap',
@@ -105,11 +121,20 @@ module.exports = [
             },
             {
                 text: 'Contribute',
-                link: '/more/contribute'
-            },
-            {
-                text: 'Psyonix Links',
-                link: '/more/psyonix'
+                items: [
+                    {
+                        text: 'Contributing guide',
+                        link: '/more/contribute'
+                    },
+                    {
+                        text: 'Github',
+                        link: 'https://github.com/rocketleaguemapmaking/RL-Docs'
+                    },
+                    {
+                        text: 'Patreon',
+                        link: 'https://www.patreon.com/rocketleaguemapmaking'
+                    }
+                ]
             }
         ]
     }

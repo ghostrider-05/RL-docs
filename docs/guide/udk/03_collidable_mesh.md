@@ -1,6 +1,23 @@
 ---
 title: 'Collidable Meshes'
+tutorials: '
+- [Simple Shark](https://www.youtube.com/watch?v=sl7_xb7TFW4&list=PLIomqmQFYkVTl2FI2YBGzGuUZWSvZnS9d&index=3)
+'
+cheatsheets: '
+# Cheat sheet collisions
+
+Steps:
+1. Add object 
+1. Click buttons 
+1. ???
+1. Profit
+'
 ---
+
+::: slot cheatsheet
+Test
+:::
+
 # Collidable Meshes <Badge text="important" type="tip"/>
 
 ## Settings
@@ -68,4 +85,8 @@ There will be a few warnings when the build completes, but we can clear those up
 
 :::warning
 You might be tempted to click File > Save All. This can cause Dummy Asset packages to become corrupted, which is something that can confuse even the most experienced mapmakers. The earlier you can develop the muscle memory of using **File > Save Current Level**, the better.
+:::
+
+:::slot footer
+Here's some contact info
 :::
