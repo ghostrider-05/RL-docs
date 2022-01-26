@@ -9,9 +9,30 @@ JetFox has been working to make a standalone hosting site that vastly simplifies
 
 ## Psyonix Uploader Tool
 
-When Psyonix announced Steam Workshop support in 2016, they proudly touted their Workshop Uploader program which can instantly create a Steam Workshop page for your new map. **However, it, uh… sucks.**
+When Psyonix announced Steam Workshop support in 2016, they proudly touted their Workshop Uploader program which can instantly create a Steam Workshop page for your new map. However, it, uh… doesn't work, because they haven't updated the tool since the update to 64bit. You can find the working and updated tool in [Discord server](https://discord.com/channels/711882968200904715/713071168331972699/933414521987555428). Replace this version with the "official" broken tool (may be found two layers up from {CookedPCConsole}, inside the folder Binaries) and then you can follow the [steps for uploading with the tool](https://steamcommunity.com/sharedfiles/filedetails/?id=813629808). Note that with this method you have the option to add the `Maps` tag to your map.
 
-WorkshopUploader.exe may be found two layers up from {CookedPCConsole}, inside the folder Binaries. If you can get it to work, then I’m happy for you.
+The limits for uploading with the uploader tool:
+
+| Field         | Limit          |
+| ------------- | -------------- |
+| Title         | 50 characters  |
+| Description   | 140 characters |
+| Preview image | 1 MB           |
+
+:::tip Startup option
+If you want to upload / update your workshop item more easily, start Rocket League with the following options:
+
+```sh
+RocketLeague.exe WORKSHOP
+```
+
+Or copy this `.bat` script somewhere and drag a [`.vdf`](#vdf-file) onto the script to upload the item:
+
+```txt
+
+```
+
+:::
 
 ## Creating a Preview Image
 
@@ -44,7 +65,7 @@ Sometimes Steam will reject your upload with minimal information. The only 100% 
 
 ## .vdf file
 
-Next, create a new text file and change the file extension to .vdf. This is a Valve Description File (probably) which contains the info Steam needs to properly offer your map to people on the workshop. Open it in your favorite text editor. Insert this:
+Next, create a new text file and change the file extension to .vdf. This is a file format for Steam metadata storage (in the [KeyValues]() format) which contains the information Steam needs to properly offer your map to people on the workshop. Open it in your favorite text editor. Insert this:
 
 ```vdf
 "workshopitem"
@@ -60,11 +81,11 @@ Next, create a new text file and change the file extension to .vdf. This is a Va
 }
 ```
 
-| Field name | Explanation |
-| ---------- | ----------- |
-| appid | **needs to be 252950** like I've shown here. That is the code that corresponds to Rocket League, as you can see at the end of its [Steam URL](http://store.steampowered.com/app/252950/) |
-| publishedfileid  | the unique ID tied to your item and profile. Only the contributors to an item have access to modify that Workshop item. You can see the number at the end of the workshop page's URL: [http://steamcommunity.com/sharedfiles/filedetails/?id=814858208](http://steamcommunity.com/sharedfiles/filedetails/?id=814858208) (shameless plug). For the initial upload, this needs to be '0'. SteamCMD will automatically change it to the correct value after your first upload.|  
-| visibility | when set to 0 means Public. If you just want to use this as way to iteratively test maps and not be judged, you can change that to 1 (Friends only) or 2 (only me)|
+| Field name      | Explanation                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| appid           | **needs to be 252950** like I've shown here. That is the code that corresponds to Rocket League, as you can see at the end of its [Steam URL](http://store.steampowered.com/app/252950/)                                                                                                                                                                                                                                                                                     |
+| publishedfileid | the unique ID tied to your item and profile. Only the contributors to an item have access to modify that Workshop item. You can see the number at the end of the workshop page's URL: [http://steamcommunity.com/sharedfiles/filedetails/?id=814858208](http://steamcommunity.com/sharedfiles/filedetails/?id=814858208) (shameless plug). For the initial upload, this needs to be '0'. SteamCMD will automatically change it to the correct value after your first upload. |
+| visibility      | when set to 0 means Public. If you just want to use this as way to iteratively test maps and not be judged, you can change that to 1 (Friends only) or 2 (only me)                                                                                                                                                                                                                                                                                                           |
 
 Hopefully the rest of the fields are self-explanatory.
 
