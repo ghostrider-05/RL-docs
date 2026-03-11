@@ -1,10 +1,15 @@
 node_modules
 .gitlab-ci.yml
 .vscode
+.frontmatter
+.wrangler
 .idea
 
 # Ignore compiled HTML
-/docs/.vuepress/dist/
+/docs/.vitepress/dist/
+/docs/.vitepress/cache/
+/.vitepress/cache/
+/docs/.vitepress/public/admin/
 
 # Do not commit API keys
 .env

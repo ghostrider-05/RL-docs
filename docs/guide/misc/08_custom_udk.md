@@ -1,9 +1,5 @@
 ---
 title: Customize UDK
-tags:
-    - UDK editor
-    - Customize
-    - custom toolbar
 ---
 # Customized UDK
 
@@ -14,7 +10,7 @@ If you installed UDK with (a future version of) the [quick setup script](https:/
 To replace the UDK splash screen with your own image, save the image as a `.bmp` file (preferably with a size of 650*375), rename the image to `EdSplash` and replace the standard splash screen in \
 `{UDK Folder}/UDKGame/Splash/PC/`
 
-![""](/images/UDK/shark_UDK_splash.png "Nominee for best splash screen?")
+![A splash screen for UDK with an octane car and the UDK logo](/images/misc/shark_UDK_splash.png "Nominee for best splash screen?")
 
 ## Welcome Screen
 
@@ -58,7 +54,7 @@ Tip_00001=Did you know you can replace the current tips with your own?\n\nLearn 
 
 ## Documentation
 
-The [Content Browser](../../essential/08_content_browser.md#content-browser) has a tab for documentation, which you can fill with your own useful links by editing the file `{UDK Folder}\Engine\EditorResources\UDKOffline.html`
+The [Content Browser](../../essential/content_browser.md#content-browser) has a tab for documentation, which you can fill with your own useful links by editing the file `{UDK Folder}\Engine\EditorResources\UDKOffline.html`
 
 ## UDK Custom Hotkeys
 
@@ -94,7 +90,7 @@ You can change the text of almost any message or button (including the `Save all
 
 You can add (or remove) your own favorite classes in the right click > add actors menu. For class `MyClass`, add the class `ActorFactoryMyClass` in a source folder:
 
-```uc
+```txt
 // /Development/src/MyMod/Classes/ActorFactoryMyClass.uc
 
 class ActorFactoryMyClass extends ActorFactory
@@ -117,7 +113,7 @@ By setting `bShowInEditorQuickMenu=true` you can move `MyClass` from `add actors
 
 Similar to the actor classes menu, you can extend the `Factory` class for a custom item in the content browser.
 
-```uc
+```txt
 // /Development/src/MyMod/Classes/ActorFactoryMyClassNew.uc
 
 class ActorFactoryMyClassNew extends Factory
@@ -136,4 +132,4 @@ defaultproperties
 
 ## More
 
-If you are willing to dive into the config files and source code of UDK to discover more tricks, please share anything interesting that you find! Let's wait until Psyonix uses [UE5](../../ue5/) to make Rocket League
+If you are willing to dive into the config files and source code of UDK to discover more tricks, please share anything interesting that you find!

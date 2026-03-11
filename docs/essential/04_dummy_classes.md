@@ -1,9 +1,5 @@
 ---
 title: Dummy Classes
-tags:
-  - dummy classes
-  - guide
-  - hello
 ---
 
 # Dummy Classes
@@ -15,7 +11,7 @@ These are UDK-ready classes with the same names and properties as the customized
 The download may be found under [Downloads.](../resources/downloads.md#setup)
 If you feel like using git, you can run git clone within the UDK folder. Downloading the .zip file is totally fine too.
 
-![alt text](/images/UDK/essential/dummyclasses_location.png "Lots of goodies")
+![Folder in File explorer with Dummy classes with dummy classes folders selected](/images/udk/essential/dummyclasses_location.png "Lots of goodies")
 
 Extract the .zip, and paste the four folders alongside all of the others in
 `{UDK Folder}\Development\Src`
@@ -57,7 +53,7 @@ This tells UDK to recognize that these folders contain assets that you intend to
 
 **In `StaticMeshActor.uc`** go to these lines
 
-```unrealscript
+```txt
 Begin Object Class=StaticMeshComponent Name=StaticMeshComponent0
     bAllowApproximateOcclusion=TRUE
     bForceDirectLightMap=TRUE
@@ -67,7 +63,7 @@ End Object
 
 And replace it with these lines
 
-```unrealscript{5-7}
+```txt{5-7}
 Begin Object Class=StaticMeshComponent Name=StaticMeshComponent0
     bAllowApproximateOcclusion=TRUE
     bForceDirectLightMap=TRUE
@@ -82,7 +78,7 @@ This is to set the defaults that we want on every solid object in the game.
 
 **In `PrimitiveComponent.uc`** go to these lines:
 
-```unrealscript
+```txt
 enum ERBCollisionChannel
 {
     RBCC_Default,
@@ -109,7 +105,7 @@ enum ERBCollisionChannel
 
 And replace it with these lines:
 
-```unrealscript{10-12}
+```txt{10-12}
 enum ERBCollisionChannel
 {
     RBCC_Default,
@@ -139,7 +135,7 @@ enum ERBCollisionChannel
 
 Additionally, update `RBCollisionChannelContainer` (line ~401) to have `Ball`, `VehicleBlocker` and `BallBlocker` so it looks like this:
 
-```unrealscript{10-12}
+```txt{10-12}
 struct RBCollisionChannelContainer
 {
     var() const bool Default;
@@ -171,25 +167,25 @@ This allows us to give objects different collision channels for different behavi
 
 On line ~180, update
 
-```unrealscript
+```txt
 var() bool bUseAsOccluder;
 ```
 
 to
 
-```unrealscript
+```txt
 var(Rendering) bool bUseAsOccluder;
 ```
 
 **Lastly, in `Actor.uc`** go to this line:
 
-```unrealscript
+```txt
 var const bool bNoDelete; // Cannot be deleted during play.
 ```
 
 And replace it with this line:
 
-```unrealscript
+```txt
 var() const bool bNoDelete; // Cannot be deleted during play.
 ```
 
@@ -203,7 +199,7 @@ If you ever change these files in the future, you will need to recompile again.
 
 In `{UDK Folder}\Binaries\`, run `UnrealFrontend.exe`.
 
-![alt text](/images/UDK/essential/image81.png "Because you bake a cake before you ship it... thanks TJ")
+![Unreal Frontend on the Script step, focusing](/images/udk/essential/frontend_scripts_recompile.png "Because you bake a cake before you ship it... thanks TJ")
 
 **Click Script and run Full Recompile.** Close it after it finishes, and now you’re allowed to start.
 ...almost
@@ -212,8 +208,8 @@ In `{UDK Folder}\Binaries\`, run `UnrealFrontend.exe`.
 
 Thanks to the hard work of friendly modders, there is an extremely useful UDK Package (.UPK) which contains a number of assets ripped from the game. They allow you to build your map with pieces and materials that are already in the game. However, the important thing is that they have the exact same name as the in-game assets. More on this aspect of things later.
 
-You can find the download [Here.](../resources/downloads.md#setup)
+You can find the download [in the resources](../resources/downloads.md#setup).
 
 **Place this into `{UDK Folder}\UDKGame\Content\`** alongside the various other files. UDK will recognize it here and make its contents available to you.
 
-[A later section](../guide/udk/14_dummy_assets.md) of this guide will show you how to use any resource from any map, but this is more than enough to get started with.
+[A later section](../guide/udk/dummy_assets.md) of this guide will show you how to use any resource from any map, but this is more than enough to get started with.

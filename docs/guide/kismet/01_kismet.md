@@ -1,11 +1,12 @@
 ---
 title: Kismet
+pageClass: page-inline-images
 ---
 # Kismet Overview
 
 Kismet is a node-based programming system that presents a “cleaner” and “easier to use” interface than you would get writing your own code. Logical blocks take the place of code classes and functions, and lines on the page indicate data and program flow.
 
-Kismet, much like the [CSG tools](../udk/01_csg.md), is not meant to be used to program a whole game. It is meant more as a tool for cheap and dirty testing, but in this case it is the only option we appear to have.
+Kismet, much like the [CSG tools](../udk/csg.md), is not meant to be used to program a whole game. It is meant more as a tool for cheap and dirty testing, but in this case it is the only option we appear to have.
 
 ## Key Terms
 
@@ -31,26 +32,26 @@ The terms Link/Connector/Connection are used somewhat interchangeably, but they 
 * `C (with node(s) selected)` - Add comment block
 
 :::tip More Hotkeys
-It is possible to [add kismet nodes](https://docs.unrealengine.com/udk/Three/KismetUserGuide.html#Hotkeys) with your keyboard, and you can also [change the hotkeys](../misc/08_custom_udk.md#kismet) as you prefer!
+It is possible to [add kismet nodes](https://docs.unrealengine.com/udk/Three/KismetUserGuide.html#Hotkeys) with your keyboard, and you can also [change the hotkeys](../misc/custom_udk.md#kismet) as you prefer!
 :::
 
 ## Kismet Editor Window <Badge text="important" type="tip"/>
 
-![alt text](/images/kismet/guide/image18.png "Nice and simple")
+![The kismet interface on the main sequence (empty)](/images/kismet/ui_overview.png "Nice and simple")
 
 1 - Toolbar - Various useful-ish functions, all in one place:
 
-* ![alt text](/images/kismet/guide/image87.png) Go back to the previous sequence
-* ![alt text](/images/kismet/guide/image242.png) Go forward to the returned-from sequence
-* ![alt text](/images/kismet/guide/image154.png) Go up one sequence level
-* ![alt text](/images/kismet/guide/image62.png) Rename the current sequence
-* ![alt text](/images/kismet/guide/image188.png) Zoom to selected (`A`)
-* ![alt text](/images/kismet/guide/image208.png) Hide node’s unused connectors (also in a node’s right click menu)
-* ![alt text](/images/kismet/guide/image19.png) Reveal all of node’s connectors (also in a node’s right click menu)
-* ![alt text](/images/kismet/guide/image17.png) Search for nodes to place
-* ![alt text](/images/kismet/guide/image36.png) Search for nodes already in editor
-* ![alt text](/images/kismet/guide/image182.png) Update the list of nodes
-* ![alt text](/images/kismet/guide/image249.png) Open a second Kismet window
+* ![](/images/kismet/icon_back.png) Go back to the previous sequence
+* ![](/images/kismet/icon_forward.png) Go forward to the returned-from sequence
+* ![](/images/kismet/icon_up.png) Go up one sequence level
+* ![](/images/kismet/icon_rename.png) Rename the current sequence
+* ![](/images/kismet/icon_zoom_selected.png) Zoom to selected (`A`)
+* ![](/images/kismet/icon_hide_unused.png) Hide node’s unused connectors (also in a node’s right click menu)
+* ![](/images/kismet/icon_reveal_all.png) Reveal all of node’s connectors (also in a node’s right click menu)
+* ![](/images/kismet/icon_search_add.png) Search for nodes to place
+* ![](/images/kismet/icon_search_sequence.png) Search for nodes already in editor
+* ![](/images/kismet/icon_update.png) Update the list of nodes
+* ![](/images/kismet/icon_new_window.png) Open a second Kismet window
 
 2 - Node Editor - Place, move, and interconnect nodes
 
@@ -86,7 +87,7 @@ If you wish to completely abuse the game for things like Chaos Rumble or (the or
 | External Variable | Named variables of any type from an external sequence ([see Sequences](#sequences)) |
 | Float             | Numbers with decimal precision, like speed or Z location                            |
 | Int               | Numbers with integer precision, like number of players                              |
-| Matinee Data      | Animation data (see [Matinee](../udk/21_matinee.md))                                |
+| Matinee Data      | Animation data (see [Matinee](../udk/matinee.md))                                   |
 | Named Variable    | [Named variables][udk-docs:named-vars] of any type                                  |
 | Object            | Objects in the map, like the ball                                                   |
 | Player            | Players themselves                                                                  |
@@ -97,12 +98,12 @@ If you wish to completely abuse the game for things like Chaos Rumble or (the or
 
 I encourage you to test out any Events which sound interesting. Here are some of the most frequently and generally useful:
 
-| Event                   | Used for...                                                                               |
-| ----------------------- | ----------------------------------------------------------------------------------------- |
-| Level Loaded            | Running code as soon as the map is loaded                                                 |
-| Player > Player Spawned | Running code when a player spawns or respawns                                             |
-| TAGame > Round Start    | Running code when gameplay starts or resumes                                              |
-| TriggerVolume Touch     | Running code when the player or ball enters a region (more on this [here](03_trigger.md)) |
+| Event                   | Used for...                                                                                          |
+| ----------------------- | ---------------------------------------------------------------------------------------------------- |
+| Level Loaded            | Running code as soon as the map is loaded                                                            |
+| Player > Player Spawned | Running code when a player spawns or respawns                                                        |
+| TAGame > Round Start    | Running code when gameplay starts or resumes                                                         |
+| TriggerVolume Touch     | Running code when the player or ball enters a region ([read more about trigger volumes](trigger.md)) |
 
 ### Actions
 
@@ -132,3 +133,6 @@ There are a few key nodes to keep in mind when working with Sequences, as they e
 | Event > Remote Event                   | Activating a Sequence when that event is triggered |
 
 [udk-docs:named-vars]: https://docs.unrealengine.com/udk/Three/KismetUserGuide.html#Named%20Variables
+
+<!-- Alt not required for icons: -->
+<!-- markdownlint-disable-file MD045 -->

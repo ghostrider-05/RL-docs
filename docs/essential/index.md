@@ -1,13 +1,10 @@
 ---
-title: 'Essentials'
-tags:
-  - essential
-  - essentials
+title: Essentials
 ---
 
 # Mapmaking Essentials
 
-![alt text](/images/UDK/essential/dangerous.png "Also dangerous to take this")
+![Introduction image](/images/udk/essential/dangerous.png "It is also dangerous to take this")
 
 ## Getting Started
 
@@ -24,8 +21,8 @@ Join the [Rocket League Mapmaking Discord Server](https://discord.gg/PWu3ZWa) to
 
 ## Epic Games
 
-**Custom maps can be made with the Epic Games Launcher version of Rocket League,** with only slight differences. For example, the file paths for various tools may change. The process of [publishing a map](../guide/multiplayer/02_publishing.md) is the only notable difference.
+**Custom maps can be made with the Epic Games Launcher version of Rocket League,** with only slight differences. For example, the file paths for various tools may change. The process of [publishing a map](../guide/multiplayer/publishing.md) is the only notable difference.
 
 ## Feedback
 
-The whole website can be found [on GitHub](https://github.com/RocketLeagueMapmaking/RL-docs) and we <3 improvements and corrections (or drop a message in the Discord server with some feedback). If you want to report incorrect documentation, please open an issue on our [issue tracker](https://github.com/RocketLeagueMapmaking/RL-docs/issues)
+The whole website can be found [on GitHub](https://github.com/RocketLeagueMapmaking/RL-docs) and we <3 improvements and corrections (or drop a message in the Discord server with some feedback). If you want to report incorrect documentation, please open an issue on our [issue tracker](https://github.com/RocketLeagueMapmaking/RL-docs/issues).

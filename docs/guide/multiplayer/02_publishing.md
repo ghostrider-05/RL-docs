@@ -25,7 +25,7 @@ On the Steam Workshop page for a published map, the preview images are locked in
 
 ## SteamCMD
 
-The real way to get things done is with an official Valve program called SteamCMD. The support page may be found [here](https://developer.valvesoftware.com/wiki/SteamCMD). **Install it as the guide describes.** I recommend putting it within the Steam Program Files folder just to consolidate things.
+The real way to get things done is with an official Valve program called SteamCMD. The support page may be found [on the Valve Developer wiki](https://developer.valvesoftware.com/wiki/SteamCMD). **Install it as the guide describes.** I recommend putting it within the Steam Program Files folder just to consolidate things.
 
 First, you should prepare a separate folder for Workshop uploads. This way you can track the versions you upload and have better compartmentalization.
 
@@ -33,12 +33,12 @@ First, you should prepare a separate folder for Workshop uploads. This way you c
 It’s best to keep this outside of the UDK project folder so that you don’t get duplicate package warnings when you start UDK.
 :::
 
-![alt text](/images/multiplayer/image214.png "Nobody ever complains that their computer is too well organized")
+![Example of files needed to upload: .vdf, .udk and preview.jpg files](/images/multiplayer/upload_folder_example.png "Nobody ever complains that their computer is too well organized")
 
 **Copy and paste the .udk file into this new folder. Two files will need to accompany the .udk upload:**
 
-* [a preview image](02_publishing.md#creating-a-preview-image)
-* [a .vdf file](02_publishing.md#vdf-file)
+* [a preview image](publishing.md#creating-a-preview-image)
+* [a .vdf file](publishing.md#vdf-file)
 
 For the thumbnail image, you may either use a scaled down image at a 16:9 ratio (i.e. a 1920x1080 screenshot scaled to ~⅓ size) or a square image (512x512 or smaller). Make it eye-catching so that you rake in those juicy downloads.
 
@@ -64,11 +64,11 @@ Next, create a new text file and change the file extension to .vdf. This is a Va
 }
 ```
 
-| Field name | Explanation |
-| ---------- | ----------- |
-| appid | **needs to be 252950** like I've shown here. That is the code that corresponds to Rocket League, as you can see at the end of its [Steam URL](http://store.steampowered.com/app/252950/) |
-| publishedfileid  | the unique ID tied to your item and profile. Only the contributors to an item have access to modify that Workshop item. You can see the number at the end of the workshop page's URL: [http://steamcommunity.com/sharedfiles/filedetails/?id=814858208](http://steamcommunity.com/sharedfiles/filedetails/?id=814858208) (shameless plug). For the initial upload, this needs to be '0'. SteamCMD will automatically change it to the correct value after your first upload.|  
-| visibility | when set to 0 means Public. If you just want to use this as way to iteratively test maps and not be judged, you can change that to 1 (Friends only) or 2 (only me)|
+| Field name      | Explanation                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| appid           | **needs to be 252950** like I've shown here. That is the code that corresponds to Rocket League, as you can see at the end of its [Steam URL](http://store.steampowered.com/app/252950/)                                                                                                                                                                                                                                                                                     |
+| publishedfileid | the unique ID tied to your item and profile. Only the contributors to an item have access to modify that Workshop item. You can see the number at the end of the workshop page's URL: [http://steamcommunity.com/sharedfiles/filedetails/?id=814858208](http://steamcommunity.com/sharedfiles/filedetails/?id=814858208) (shameless plug). For the initial upload, this needs to be '0'. SteamCMD will automatically change it to the correct value after your first upload. |
+| visibility      | when set to 0 means Public. If you just want to use this as way to iteratively test maps and not be judged, you can change that to 1 (Friends only) or 2 (only me)                                                                                                                                                                                                                                                                                                           |
 
 Hopefully the rest of the fields are self-explanatory.
 

@@ -1,9 +1,5 @@
 ---
 title: Project Setup
-tags:
-  - project setup
-  - new folder
-  - rocket league mods
 ---
 # Project Setup
 
@@ -20,11 +16,11 @@ I use Windows 10 and the Steam version of Rocket League, so please keep that in 
     * Several of my modded maps live inside `\mods`, a folder I created
 `C:\Games\SteamApps\common\rocketleague\TAGame\CookedPCConsole` will be referred to as `{CookedPCConsole}` for simplicity.
 
-* As mentioned in the [UDK install process](03_installing.md), everything will live inside `{UDK Folder}`
+* As mentioned in the [UDK install process](installing.md), everything will live inside `{UDK Folder}`
   * **Each individual custom map should live inside a folder within `{UDK Folder}\UDKGame\Content\Maps\`**
   * In addition to these folders, I highly highly recommend making two Windows File Explorer shortcuts, or bookmarking these locations
     * One that points to `{CookedPCConsole}`
-    * One that points to the Steam Workshop folder for Rocket League. This may be found in the Steam install location (the first half of `{CookedPCConsole}`), but instead of `\rocketleague\` it will be `\workshop\content\252950\`. Each downloaded map has a custom identifier in here, and it can be incredibly valuable to open them up in UDK and see how things are made.
+    * One that points to the Steam Workshop folder for Rocket League. This may be found in the Steam install location (the first half of `{CookedPCConsole}`), but instead of `\common\` it will be `\workshop\content\252950\`. Each downloaded map has a custom identifier in here, and it can be incredibly valuable to open them up in UDK and see how things are made.
     * Keep these within the `\Maps\` folder
 
 * Within `C:\UDK\` I also have a folder named `Assets`. This is where I keep Blender projects, exported meshes, custom textures, screenshots, and whatever else (each within a categorized folder) that I might want to have easy access to.
@@ -66,7 +62,7 @@ For ease of use, I copy this script into the folder of each of my in-progress ma
 
 When you run UDK Editor, you will be faced with a welcome splash screen and a few options.
 
-![alt text](/images/UDK/essential/image251.png "A nice day to be a cube on a platform in an infinite void")
+![UDK welcome and template screens](/images/udk/essential/ui_map_template.png "A nice day to be a cube on a platform in an infinite void")
 
 If you want to have an animated skysphere around your world, use one of the Lighting templates. If you just want an entirely clean slate, go with the Blank Map option.
 

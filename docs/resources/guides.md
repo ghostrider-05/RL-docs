@@ -1,16 +1,22 @@
 ---
-title: 'Guides'
+title: Guides
+sidebar: false
+next: false
 editLink: false
-tags:
-  - guides
 ---
 # Guides
 
 More Recent/Thorough Guides At The Top
 
+## 2025
+
+* [Tadpole's AlphaConsole 2.0 Tutorials](https://www.youtube.com/watch?v=cw04XoVQheY&list=PLOFEfy_Id1UiISAMuqzKOj82GlFuiUC8Z&index=13)
+
 ## 2023
 
+* [Simple Shark's RLMM Tutorial Series](https://www.youtube.com/playlist?list=PLIomqmQFYkVTl2FI2YBGzGuUZWSvZnS9d)
 * [Rocket Sledge's How To Play Custom Maps](https://www.youtube.com/watch?v=qPJO9GSexKU)
+* [Miss Macho's How to Play Multiplayer Custom Maps](https://www.youtube.com/watch?v=mNwG_Cnkk4o)
 
 ## 2021
 

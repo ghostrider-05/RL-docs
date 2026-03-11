@@ -1,10 +1,12 @@
 {
   "name": "rocket_league_map_making",
-  "version": "0.9.0",
+  "version": "0.11.0",
   "description": "A website containing information pertaining to the creation, extension, debugging, and concepts of Rocket League map making.",
   "author": "RLMM",
-  "license": "ISC",
-  "homepage": "http://rocketleaguemapmaking.com",
+  "license": "MIT",
+  "type": "module",
+  "private": true,
+  "homepage": "https://rocketleaguemapmaking.com",
   "repository": {
     "type": "git",
     "url": "https://github.com/rocketleaguemapmaking/RL-docs.git"
@@ -13,32 +15,39 @@
     "url": "https://github.com/rocketleaguemapmaking/RL-docs/issues"
   },
   "scripts": {
-    "docs:build": "vuepress build docs",
-    "docs:dev": "vuepress dev docs",
-    "test": "node ./.github/workflows/md_link_check.js",
-    "lint": "eslint docs/.vuepress/ --ext .js,.ts,.vue",
+    "docs:build": "vitepress build docs",
+    "docs:dev": "vitepress dev docs",
+    "docs:preview": "vitepress preview docs",
+    "lint": "eslint docs/.vitepress/",
     "lint:fix": "npm run lint -- --fix",
+    "lint-files": "npm run lint-files:size && npm run lint-files:name",
+    "lint-files:size": "fslint --files=docs/.vitepress/public/**/*.png --limit-mb=1",
+    "lint-files:name": "ls-lint",
     "lint-markdown": "npx markdownlint-cli2 \"**/*.md\" \"#node_modules\" \"#.github\"",
-    "lint-markdown:fix": "npx markdownlint-cli2-fix \"**/*.md\" \"#node_modules\" \"#.github\""
+    "lint-markdown:fix": "npx markdownlint-cli2 \"**/*.md\" \"#node_modules\" \"#.github\" --fix"
   },
   "engines": {
-    "node": ">= 12.22.0 || >=14.0.0 || >=16.0.0",
-    "npm": ">=7.0.0"
+    "node": ">=22.0.0",
+    "npm": ">=10.0.0"
+  },
+  "overrides": {
+    "react": "^19.2.4",
+    "@types/react": "^19.2.14",
+    "react-dom": "^19.2.4"
   },
   "dependencies": {
-    "node-fetch": "^2.6.11",
-    "vue": "^2.7.14",
-    "vue-template-compiler": "^2.7.14",
-    "vuepress-theme-default-prefers-color-scheme": "^2.0.0"
+    "@rocketleaguemapmaking/theme-rlmm": "github:rocketleaguemapmaking/theme-rlmm#fef079e",
+    "vite-plugin-decap-cms": "^0.5.2"
   },
   "devDependencies": {
-    "eslint": "^8.40.0",
-    "eslint-plugin-vue": "^9.13.0",
-    "markdown-link-check": "^3.11.2",
-    "markdown-link-extractor": "^3.1.0",
-    "markdownlint-cli2": "^0.7.1",
-    "vuepress": "^1.9.9",
-    "vuepress-plugin-container": "^2.1.5",
-    "vuepress-plugin-seo": "^0.1.4"
+    "@eslint/js": "^9.39.4",
+    "@ls-lint/ls-lint": "^2.3.1",
+    "eslint": "^9.39.4",
+    "eslint-plugin-vue": "^9.33.0",
+    "fslint": "^1.1.0",
+    "markdownlint-cli2": "^0.21.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.56.1",
+    "wrangler": "^4.71.0"
   }
 }

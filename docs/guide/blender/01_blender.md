@@ -1,5 +1,6 @@
 ---
 title: Hello Blender
+advanced: false
 ---
 # Hello Blender
 
@@ -9,18 +10,21 @@ Blender is a wonderful program, though it is also an extremely complicated one. 
 
 There are some great resources out on the world wide web, and some extremely dedicated YouTubers and communities.
 
-:::tip Here’s a list of places you can go for help:
+:::tip
+
+Here’s a list of places you can go for help:
 
 * [Blender Subreddit](https://www.reddit.com/r/blender/)
 * [Blender Stack Exchange](https://blender.stackexchange.com/)
 * [Blender Artists](https://blenderartists.org/)
 * [Blender Guru (YouTube channel)](https://www.youtube.com/channel/UCOKHwx1VCdgnxwbjyb9Iu1g)
 * [CG Cookie (YouTube channel)](https://www.youtube.com/channel/UC9VayT7q3pQ7tdF-TG4Q0yQ)
+
 :::
 
 And of course, I and others would be happy to help you out in Discord.
 
-Recall this bit of sage advice [from earlier in the guide](../../essential/07_udk_editor.md#general-advice):
+Recall this bit of sage advice [from earlier in the guide](../../essential/udk_editor.md#general-advice):
 
 > Try going into an empty project and just pressing literally every button and every key combo you can think of. You’ll learn tons of things about this program. This is also my best piece of advice for learning Blender.
 **Don’t be afraid of buttons in software.**
